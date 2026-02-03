@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>프로젝트 현황표</title>
+
+    <style>
+       table {
+       border-collapse: collapse; /* 경계선을 하나로 합침 */
+       width: 100%;
+       margin: 20px 0;
+       }
+
+       th,td {
+       border: 1px solid #ddd;
+       padding: 12px;
+       text-align: left;
+       }
+
+       th {
+       background-color: #4CAF50;
+       color: white;
+       font-weight: bold;
+       }
+
+       tr:nth-child(even) {
+       background-color: #f2f2f2; /* 짝수 행에 배경색 */
+       }
+
+       tr:hover {
+       background-color: #ddd; /* 마우스 올렸을 때 */
+       }
+    </style>
+</head>
+
+
+<body>
+    <h1>팀 프로젝트 현황</h1>
+
+    <table>
+      <thead>
+        <tr>
+           <th rowspan="2">프로젝트명</th>
+           <th colspan="2">진행 현황</th>
+           <th rowspan="2">비고</th>
+         <tr>
+           <th>완료율</th>
+           <th>남은 일수</th>
+         </tr>
+      </thead>
+
+      <tbody>
+         <tr>
+           <td>쇼핑몰 웹사이트</td>
+           <td>75%</td>
+           <td>5일</td>
+           <td>순조롭게 진행 중</td>
+         </tr>
+
+         <tr>
+            <td>모바일 앱 UI</td>
+            <td>90%</td>
+            <td>2일</td>
+            <td>마감 임박</td>
+         </tr>
+
+         <tr>
+           <td>데이터베이스 설계</td>
+           <td>박멘토</td>
+           <td>60%</td>
+           <td>2024-03-20</td>
+         </tr>
+
+      </tbody>
+
+    </table>
+</body>
+
+
+</html>

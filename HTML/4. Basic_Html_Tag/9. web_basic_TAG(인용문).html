@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+ <meta charset="UTF-8">
+ <title>JavaScript 기초 가이드</title>
+ <style>
+ blockquote {
+ background-color: #f9f9f9;
+ border-left: 4px solid #ccc;
+ padding: 10px;
+ margin: 20px 0;
+ }
+ code {
+ background-color: #f4f4f4;
+ padding: 2px 4px;
+ border-radius: 3px;
+ font-family: monospace;
+ }
+ pre {
+ background-color: #f8f8f8;
+ border: 1px solid #e1e1e1;
+ padding: 15px;
+ overflow-x: auto;
+ }
+ </style>
+</head>
+<body>
+ <h1>JavaScript 변수 선언</h1>
+
+ <h2>변수란?</h2>
+ <p>변수는 데이터를 저장하는 공간입니다. JavaScript에서는
+ <code>var</code>, <code>let</code>, <code>const</code> 키워드를 사용합니다.</p>
+
+ <h2>기본 사용법</h2>
+ <pre><code>// 변수 선언과 할당
+let userName = "김개발";
+const age = 20;
+var isStudent = true;
+
+// 변수 사용
+console.log("이름: " + userName);
+console.log("나이: " + age);</code></pre>
+
+ <h2>전문가 조언</h2>
+ <blockquote>
+ <p>현대 JavaScript에서는 <code>let</code>과 <code>const</code>를 사용하고,
+ <code>var</code>는 피하는 것이 좋습니다.
+ 이는 스코프 문제를 방지하고 더 안전한 코드를 작성할 수 있게 해줍니다.</p>
+ <cite>- JavaScript 개발 가이드라인</cite>
+ </blockquote>
+
+ <h2>실습 예제</h2>
+ <p>다음 코드를 실행해보세요:</p>
+ <pre><code>let message = "Hello, World!";
+console.log(message);</code></pre>
+
+ <p>브라우저 개발자 도구에서 <q>Hello, World!</q>가 출력되는 것을 확인할 수 있습니다.</p>
+</body>
+</html>
