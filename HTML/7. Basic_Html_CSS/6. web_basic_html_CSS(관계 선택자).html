@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>관계 선택자 실습</title>
+  <style>
+      /* 자손 선택자: nav 안의 모든 li */
+      nav li {
+          list-style: none;
+          padding: 5px;
+      }
+
+      /* 자식 선택자: ul의 직접 자식 li만 */
+      ul > li {
+          background-color: #f0f0f0;
+          margin: 2px;
+      }
+
+      /* 인접 형제 선택자: h2 바로 다음 p */
+      h2 + p {
+          color: blue;
+          font-weight: bold;
+      }
+
+      /* 일반 형제 선택자: h2 이후 모든 p */
+      h2 ~ p {
+          margin-left: 20px;
+      }
+  </style>
+</head>
+<body>
+<nav>
+  <ul>
+    <li>홈</li>
+    <li>서비스
+      <ul>
+        <li>웹개발</li>
+        <li>앱개발</li>
+      </ul>
+    </li>
+    <li>연락처</li>
+  </ul>
+</nav>
+
+<h2>관계 선택자란?</h2>
+<p>이 문단은 h2 바로 다음에 있어서 파란색으로 표시됩니다.</p>
+<p>이 문단은 h2 이후에 있어서 왼쪽 여백이 있습니다.</p>
+<div>중간에 다른 요소</div>
+<p>이 문단도 h2 이후에 있어서 왼쪽 여백이 있습니다.</p>
+</body>
+</html>

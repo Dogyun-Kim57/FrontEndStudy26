@@ -1,0 +1,16 @@
+h1 {
+ color: #ff6b6b; /* 헥스 색상 코드 */
+ font-size: 32px; /* 글자 크기 */
+ text-align: center; /* 텍스트 정렬 */
+ background-color: #f8f9fa; /* 배경색 */
+ padding: 20px; /* 안쪽 여백 */
+ border: 2px solid #dee2e6; /* 테두리 */
+}
+
+p {
+ color: rgb(52, 58, 64); /* RGB 색상 */
+ font-size: 18px;
+ line-height: 1.6;
+ margin: 15px 0; /* 바깥쪽 여백 */
+ text-indent: 20px; /* 첫 줄 들여쓰기 */
+}

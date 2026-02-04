@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>다양한 내비게이션 활용</title>
+  <style>
+      body {
+          font-family: Arial, sans-serif;
+          margin: 0;
+      }
+
+      /* 메인 내비게이션 */
+      .main-nav {
+          background-color: #2c3e50;
+          padding: 1rem;
+      }
+
+      .main-nav ul {
+          list-style: none;
+          margin: 0;
+          padding: 0;
+          display: flex;
+      }
+
+      .main-nav li {
+          margin-right: 2rem;
+      }
+
+      .main-nav a {
+          color: white;
+          text-decoration: none;
+      }
+
+      .main-nav a:hover {
+          color: #3498db;
+      }
+
+      /* 브레드크럼 내비게이션 */
+      .breadcrumb {
+          background-color: #ecf0f1;
+          padding: 0.5rem 1rem;
+          font-size: 0.9rem;
+      }
+
+      .breadcrumb a {
+          color: #2c3e50;
+          text-decoration: none;
+      }
+
+      .breadcrumb a:hover {
+          text-decoration: underline;
+      }
+
+      /* 사이드 내비게이션 */
+      .sidebar-nav {
+          width: 200px;
+          background-color: #f8f9fa;
+          padding: 1rem;
+          float: left;
+          height: 300px;
+      }
+
+      .sidebar-nav ul {
+          list-style: none;
+          padding: 0;
+      }
+
+      .sidebar-nav li {
+          margin-bottom: 0.5rem;
+      }
+
+      .sidebar-nav a {
+          color: #495057;
+          text-decoration: none;
+          display: block;
+          padding: 0.5rem;
+          border-radius: 4px;
+      }
+
+      .sidebar-nav a:hover {
+          background-color: #e9ecef;
+      }
+
+      .content {
+          margin-left: 220px;
+          padding: 1rem;
+      }
+  </style>
+</head>
+<body>
+<!-- 메인 내비게이션 -->
+<nav class="main-nav">
+  <ul>
+    <li><a href="#home">홈</a></li>
+    <li><a href="#products">제품</a></li>
+    <li><a href="#support">고객지원</a></li>
+    <li><a href="#company">회사소개</a></li>
+  </ul>
+</nav>
+
+<!-- 브레드크럼 내비게이션 -->
+<nav class="breadcrumb">
+  <a href="#home">홈</a> >
+  <a href="#products">제품</a> >
+  <strong>스마트폰</strong>
+</nav>
+
+<!-- 사이드 내비게이션 -->
+<nav class="sidebar-nav">
+  <h3>카테고리</h3>
+  <ul>
+    <li><a href="#smartphones">스마트폰</a></li>
+    <li><a href="#tablets">태블릿</a></li>
+    <li><a href="#laptops">노트북</a></li>
+    <li><a href="#accessories">액세서리</a></li>
+  </ul>
+</nav>
+
+<!-- 메인 콘텐츠 -->
+<div class="content">
+  <h2>제품 목록</h2>
+  <p>여기에 제품들이 표시됩니다.</p>
+</div>
+</body>
+</html>

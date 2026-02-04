@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>블로그 with Aside</title>
+  <style>
+      body {
+          font-family: Arial, sans-serif;
+          max-width: 1200px;
+          margin: 0 auto;
+          padding: 20px;
+      }
+
+      .container {
+          display: flex;
+          gap: 30px;
+      }
+
+      main {
+          flex: 2;
+      }
+
+      aside {
+          flex: 1;
+          background-color: #f8f9fa;
+          padding: 20px;
+          border-radius: 8px;
+          height: fit-content;
+      }
+
+      .widget {
+          margin-bottom: 30px;
+      }
+
+      .widget h3 {
+          color: #333;
+          border-bottom: 2px solid #007bff;
+          padding-bottom: 10px;
+      }
+
+      .tag {
+          display: inline-block;
+          background-color: #007bff;
+          color: white;
+          padding: 5px 10px;
+          margin: 3px;
+          border-radius: 15px;
+          font-size: 12px;
+      }
+
+      .inline-tip {
+          background-color: #e8f4fd;
+          border-left: 4px solid #007bff;
+          padding: 15px;
+          margin: 20px 0;
+          border-radius: 0 8px 8px 0;
+      }
+
+      .inline-tip h4 {
+          margin-top: 0;
+          color: #007bff;
+      }
+
+  </style>
+</head>
+<body>
+<div class="container">
+  <main>
+    <article>
+      <h1>HTML5 시맨틱 태그 마스터하기</h1>
+
+      <p>HTML5는 웹 페이지의 구조를 더 명확하게 표현할 수 있는 다양한 시맨틱 태그를 제공합니다.</p>
+
+      <aside class="inline-tip">
+        <h4> 시맨틱 태그란?</h4>
+        <p>태그 이름만 봐도 그 역할을 알 수 있는 태그들을 말합니다.
+          예를 들어 &lt;header&gt;, &lt;nav&gt;, &lt;main&gt; 등이 있어요.</p>
+      </aside>
+
+      <p>이러한 태그들을 적절히 사용하면 검색엔진도 우리 페이지를 더 잘 이해할 수 있습니다.</p>
+    </article>
+  </main>
+
+  <aside>
+    <div class="widget">
+      <h3> 인기 글</h3>
+      <ul>
+        <li><a href="#">CSS 기초 완전 정복</a></li>
+        <li><a href="#">JavaScript 시작하기</a></li>
+        <li><a href="#">반응형 웹 만들기</a></li>
+      </ul>
+    </div>
+
+    <div class="widget">
+      <h3> 태그</h3>
+      <span class="tag">HTML</span>
+      <span class="tag">CSS</span>
+      <span class="tag">JavaScript</span>
+      <span class="tag">웹개발</span>
+    </div>
+  </aside>
+</div>
+</body>
+</html>

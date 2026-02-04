@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>김개발의 개발 블로그</title>
+  <style>
+      * {
+          margin: 0;
+          padding: 0;
+          box-sizing: border-box;
+      }
+
+      body {
+          font-family: 'Arial', sans-serif;
+          line-height: 1.6;
+      }
+
+      header {
+          background: #2c3e50;
+          color: white;
+          padding: 1rem;
+          text-align: center;
+      }
+
+      nav {
+          background: #34495e;
+          padding: 1rem;
+      }
+
+      nav ul {
+          list-style: none;
+          display: flex;
+          justify-content: center;
+      }
+
+      nav li {
+          margin: 0 1rem;
+      }
+
+      nav a {
+          color: white;
+          text-decoration: none;
+      }
+
+      main {
+          display: flex;
+          max-width: 1200px;
+          margin: 0 auto;
+          padding: 2rem;
+          gap: 2rem;
+      }
+
+      section {
+          flex: 2;
+      }
+
+      aside {
+          flex: 1;
+          background: #ecf0f1;
+          padding: 1rem;
+          border-radius: 5px;
+      }
+
+      article {
+          background: white;
+          margin-bottom: 2rem;
+          padding: 1.5rem;
+          border: 1px solid #ddd;
+          border-radius: 5px;
+      }
+
+      footer {
+          background: #2c3e50;
+          color: white;
+          text-align: center;
+          padding: 2rem;
+          margin-top: 3rem;
+      }
+  </style>
+</head>
+<body>
+<header>
+  <h1> 김개발의 개발 블로그</h1>
+  <p>웹 개발의 모든 것을 함께 배워요!</p>
+</header>
+
+<nav>
+  <ul>
+    <li><a href="#home">홈</a></li>
+    <li><a href="#html">HTML</a></li>
+    <li><a href="#css">CSS</a></li>
+    <li><a href="#javascript">JavaScript</a></li>
+    <li><a href="#about">소개</a></li>
+  </ul>
+</nav>
+
+<main>
+  <section>
+    <article>
+      <header>
+        <h2>HTML5 시맨틱 태그 완전 정복</h2>
+        <p>
+          <time datetime="2026-02-04">2026년 2월 4일</time>
+          | 조회수: 1,235
+        </p>
+      </header>
+      <p>오늘은 HTML5 시맨틱 태그의 모든 것을 알아보겠습니다.
+        시맨틱 태그는 웹 페이지의 구조를 의미적으로 표현하는 강력한 도구입니다.</p>
+      <p>header, nav, main, section, article, aside, footer 등
+        각 태그의 역할을 정확히 이해하고 활용하는 방법을 배워보세요.</p>
+    </article>
+
+    <article>
+      <header>
+        <h2>CSS Grid vs Flexbox, 언제 무엇을 써야 할까?</h2>
+        <p>
+          <time datetime="2026-02-04">2026년 2월 4일</time>
+          | 조회수: 870
+        </p>
+      </header>
+      <p>레이아웃을 구성할 때 CSS Grid와 Flexbox 중 어떤 것을 선택해야 할지
+        고민이 되시나요? 각각의 특징과 적절한 사용 시기를 알아보겠습니다.</p>
+    </article>
+  </section>
+
+  <aside>
+    <section>
+      <h3> 인기 글</h3>
+      <ul>
+        <li><a href="#">JavaScript 비동기 처리 완벽 가이드</a></li>
+        <li><a href="#">React vs Vue.js 비교 분석</a></li>
+        <li><a href="#">웹 접근성을 위한 HTML 작성법</a></li>
+      </ul>
+    </section>
+
+    <section>
+      <h3> 태그</h3>
+      <p>HTML, CSS, JavaScript, React, Vue.js, Node.js, 웹접근성</p>
+    </section>
+  </aside>
+</main>
+
+<footer>
+  <p>&copy; 2024 김개발의 개발 블로그. All rights reserved.</p>
+  <p> contact@kimdev.blog | 010-1234-5678</p>
+</footer>
+</body>
+</html>

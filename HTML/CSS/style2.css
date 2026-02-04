@@ -1,0 +1,41 @@
+
+/* 1. 전체 선택자 - 모든 요소에 기본 여백 제거 */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* 2. 타입 선택자 - 모든 h1 요소 스타일링 */
+h1 {
+    color: blue;
+    font-size: 2em;
+}
+
+/* 3. 클래스 선택자 - highlight 클래스 요소들 */
+.highlight {
+    background-color: yellow;
+    font-weight: bold;
+}
+
+/* 4. ID 선택자 - main-title ID 요소 */
+#main-title {
+    color: red;
+    text-align: center;
+    border: 2px solid black;
+}
+
+p {
+    color: blue;
+}
+
+/* 모든 li 태그에 여백 추가 */
+li {
+    margin-bottom: 5px;
+    list-style-type: square;
+}
+
+/* 새로운 클래스 추가 */
+.important {
+    font-size: 1.2em;
+    text-decoration: underline;
+}
