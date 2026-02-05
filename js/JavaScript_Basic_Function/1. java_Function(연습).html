@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>화살표 함수 실습</title>
+</head>
+<body>
+<h1>화살표 함수 실습</h1>
+<button id="testBtn">테스트 버튼</button>
+<div id="result"></div>
+
+<script>
+    // 기존 함수와 화살표 함수 비교
+    const result = document.getElementById('result');
+
+    // 1. 기존 함수
+    function oldAdd(a, b) {
+        return a + b;
+    }
+
+    // 2. 화살표 함수
+    const newAdd = (a, b) => a + b;
+
+    // 3. 결과 확인
+    result.innerHTML = `
+ <p>기존 함수 결과: ${oldAdd(5, 3)}</p>
+ <p>화살표 함수 결과: ${newAdd(5, 3)}</p>
+ `;
+
+    // 4. 이벤트 핸들러에서 화살표 함수 사용
+    document.getElementById('testBtn').addEventListener('click', () => {
+        alert('화살표 함수로 만든 이벤트 핸들러입니다!');
+    });
+</script>
+</body>
+</html>

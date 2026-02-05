@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>고차함수 연습</title>
+</head>
+
+<body>
+
+
+<script>
+const users = [
+ { name: "김개발", age: 20, job: "student" },
+ { name: "박멘토", age: 35, job: "developer" },
+ { name: "이디자인", age: 28, job: "designer" },
+ { name: "최기획", age: 32, job: "planner" },
+ { name: "정학생", age: 19, job: "student" }
+];
+
+// 1. map() - 모든 사용자의 나이를 1살씩 올리기
+const olderUsers = users.map(user => {
+ return { ...user, age: user.age + 1 };
+});
+
+// 2. filter() - 성인만 필터링하기
+const adults = users.filter(user => user.age >= 20);
+
+// 3. reduce() - 전체 나이의 평균 구하기
+const totalAge = users.reduce((sum, user) => sum + user.age, 0);
+const averageAge = totalAge / users.length;
+
+
+
+
+
+
+</script>
+</body>
+</html>

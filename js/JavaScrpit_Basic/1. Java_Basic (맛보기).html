@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>JavaScript 상호작용</title>
+  <style>
+      body {
+          font-family: Arial, sans-serif;
+          padding: 20px;
+      }
+
+      button {
+          padding: 10px 20px;
+          margin: 5px;
+          font-size: 16px;
+      }
+
+      #result {
+          margin-top: 20px;
+          padding: 15px;
+          border: 2px solid #007bff;
+          border-radius: 5px;
+      }
+  </style>
+</head>
+
+<body>
+<h2>JavaScript와 함께하는 간단한 게임</h2>
+
+<button onclick="askName()">이름 물어보기</button>
+<button onclick="guessNumber()">숫자 맞추기</button>
+<button onclick="showTime()">현재 시간 보기</button>
+
+<div id="result"></div>
+
+<script>
+    function askName() {
+        let name = prompt("당신의 이름을 알려주세요!");
+        if (name) {
+            document.getElementById('result').innerHTML =
+                `안녕하세요, ${name}님! JavaScript와 함께 즐거운 시간 보내세요!`;
+        }
+    }
+
+    function guessNumber() {
+        let randomNumber = Math.floor(Math.random() * 10) + 1;
+        let userGuess = prompt("1부터 10까지 숫자 중 하나를 맞춰보세요!");
+
+        if (userGuess == randomNumber) {
+            document.getElementById('result').innerHTML =
+                `정답입니다! 숫자는 ${randomNumber}였어요!`;
+        } else {
+            document.getElementById('result').innerHTML =
+                `아쉽네요! 정답은 ${randomNumber}였어요. 당신이 선택한 숫자는 ${userGuess}였습니다.`;
+        }
+    }
+
+    function showTime() {
+        let now = new Date();
+        let timeString = now.toLocaleString('ko-KR');
+        document.getElementById('result').innerHTML =
+            `현재 시간: ${timeString}`;
+    }
+</script>
+</body>
+
+</html>

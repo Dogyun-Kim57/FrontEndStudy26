@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JavaScript 첫 걸음</title>
+</head>
+<body>
+<h1>JavaScript와 함께하는 첫 번째 여행</h1>
+<button onclick="sayHello()">인사하기</button>
+<p id="message"></p>
+
+<script>  //주석 : 자바스크립트 시작!!
+
+    // 함수를 생성한다.     function 파이썬의 def과 같은 개념 //
+    function sayHello() {
+        document.getElementById('message').innerHTML = '안녕하세요!<BR> JavaScript입니다!';
+        console.log("sayHello()함수 실행완료")
+        // DOM //  // ID 요소중에 가져옴 //  // HTML로 넣어라!! //
+    }   // 함수 블럭 종료 //
+</script>
+</body>
+</html>

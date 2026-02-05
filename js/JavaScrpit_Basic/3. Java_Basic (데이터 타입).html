@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8" />
+  <title>JS 타입 출력(화면)</title>
+  <style>
+    pre { background: #f5f5f5; padding: 12px; border-radius: 8px; }
+  </style>
+</head>
+<body>
+  <h1>화면에 출력하기</h1>
+  <pre id="out"></pre>
+
+  <script>
+    const out = document.getElementById("out");
+
+    // 화면 출력용 함수
+    function print(value) {
+      out.textContent += String(value) + "\n";
+    }
+
+    // Number
+    let studentAge = 20;
+    let height = 175.5;
+    let temperature = -5;
+
+    print(studentAge);
+    print(typeof studentAge);
+
+    // String
+    let studentName = "김개발";
+    let greeting = "안녕하세요!";
+    let message = "오늘 온도는 " + temperature + "도입니다.";
+
+    print(studentName);
+    print(typeof studentName);
+
+    // Boolean
+    let isStudent = true;
+    let isGraduated = false;
+
+    print(isStudent);
+    print(typeof isStudent);
+
+    // Undefined
+    let futureJob;
+    print(futureJob);
+    print(typeof futureJob);
+
+    // Null
+    let previousJob = null;
+    print(previousJob);
+    print(typeof previousJob);
+  </script>
+</body>
+</html>

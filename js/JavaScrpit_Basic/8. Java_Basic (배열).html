@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <title>학생 점수 보기</title>
+  <style>
+      body {
+          font-family: Arial, sans-serif;
+          padding: 20px;
+      }
+
+      input, button {
+          padding: 6px;
+          margin: 4px 0;
+      }
+
+      .box {
+          border: 1px solid #ccc;
+          padding: 12px;
+          margin-bottom: 16px;
+      }
+
+      pre {
+          background: #f5f5f5;
+          padding: 10px;
+      }
+  </style>
+</head>
+<body>
+
+<h1>학생 점수 관리</h1>
+
+<div class="box">
+  <h3>학생 추가</h3>
+  이름: <input id="nameInput"><br>
+  점수: <input id="scoreInput" type="number"><br>
+  <button onclick="addStudentUI()">추가</button>
+</div>
+
+<div class="box">
+  <h3>전체 학생 목록</h3>
+  <button onclick="showAllStudentsUI()">목록 보기</button>
+  <pre id="list"></pre>
+</div>
+
+<div class="box">
+  <h3>학생 검색</h3>
+  이름: <input id="searchInput"><br>
+  <button onclick="findStudentUI()">검색</button>
+  <p id="searchResult"></p>
+</div>
+
+<script>
+    // 학생 정보를 관리하는 배열
+    let studentNames = [];
+    let studentScores = [];
+
+    // 학생 추가 함수
+    function addStudent(name, score) {
+        studentNames.push(name);
+        studentScores.push(score);
+    }
+
+    // 전체 학생 목록 출력
+    function showAllStudents() {
+        let text = '';
+        for (let i = 0; i < studentNames.length; i++) {
+            text += `${i + 1}. ${studentNames[i]} : ${studentScores[i]}점\n`;
+        }
+        return text;
+    }
+
+    // 특정 학생 검색
+    function findStudent(name) {
+        for (let i = 0; i < studentNames.length; i++) {
+            if (studentNames[i] === name) {
+                return studentScores[i];
+            }
+        }
+        return null;
+    }
+
+    // ===== 화면과 연결되는 함수 =====
+
+    function addStudentUI() {
+        let name = document.getElementById("nameInput").value;
+        let score = document.getElementById("scoreInput").value;
+
+        if (!name || !score) {
+            alert("이름과 점수를 입력하세요");
+            return;
+        }
+
+        addStudent(name, Number(score));
+        alert(`${name} 학생이 추가되었습니다`);
+        document.getElementById("nameInput").value = '';
+        document.getElementById("scoreInput").value = '';
+    }
+
+    function showAllStudentsUI() {
+        document.getElementById("list").textContent = showAllStudents();
+    }
+
+    function findStudentUI() {
+        let name = document.getElementById("searchInput").value;
+        let score = findStudent(name);
+
+        if (score !== null) {
+            document.getElementById("searchResult").textContent =
+                `${name} 학생의 점수는 ${score}점입니다`;
+        } else {
+            document.getElementById("searchResult").textContent =
+                "해당 학생을 찾을 수 없습니다";
+        }
+    }
+
+    // 초기 데이터
+    addStudent('김철수', 85);
+    addStudent('이영희', 92);
+    addStudent('박민수', 78);
+    addStudent('최지원', 88);
+</script>
+
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>변수 실습</title>
+</head>
+<body>
+<h1>변수와 상수 실습</h1>
+
+<script>
+    // 메뉴 정보 (상수)
+    const AMERICANO_PRICE = 4000;
+    const LATTE_PRICE = 4500;
+    const CAKE_PRICE = 6000;
+
+    // 주문 정보 (변수)
+    let customerName = "김개발";
+    let americanoCount = 2;
+    let latteCount = 1;
+    let cakeCount = 1;
+
+    // 총 금액 계산
+    let totalPrice = (AMERICANO_PRICE * americanoCount) +
+        (LATTE_PRICE * latteCount) +
+        (CAKE_PRICE * cakeCount);
+
+    // 결과 출력
+    console.log("=== 카페 주문서 ===");
+    console.log("고객명:", customerName);
+    console.log("아메리카노 " + americanoCount + "잔: " + (AMERICANO_PRICE * americanoCount) + "원");
+    console.log("라떼 " + latteCount + "잔: " + (LATTE_PRICE * latteCount) + "원");
+    console.log("케이크 " + cakeCount + "조각: " + (CAKE_PRICE * cakeCount) + "원");
+    console.log("총 금액: " + totalPrice + "원");
+</script>
+</body>
+</html>

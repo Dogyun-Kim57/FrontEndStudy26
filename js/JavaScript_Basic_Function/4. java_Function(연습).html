@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>객체 심화 실습중</title>
+</head>
+
+<body>
+<script>
+    // 사용자 정보를 관리하는 객체 생성
+    const userManager = {
+        users: [],
+
+        // 사용자 추가 메소드
+        addUser(name, email) {
+            const newUser = {
+                id: this.users.length + 1,
+                name: name,
+                email: email,
+                createdAt: new Date()
+            };
+            this.users.push(newUser);
+            console.log(`${name}님이 등록되었습니다.`);
+            return this;
+        },
+
+        // 사용자 조회 메소드
+        findUser(name) {
+            return this.users.find(user => user.name === name);
+        },
+
+        // 전체 사용자 수 조회
+        getUserCount() {
+            return this.users.length;
+        },
+
+        // 사용자 목록 출력
+        listUsers() {
+            console.log("=== 사용자 목록 ===");
+            this.users.forEach(user => {
+                console.log(`${user.id}. ${user.name} (${user.email})`);
+            });
+            return this;
+        }
+    };
+
+    // 사용 예시
+    userManager
+        .addUser("김개발", "kim@dev.com")
+        .addUser("이디자인", "lee@design.com")
+        .listUsers();
+
+    console.log("총 사용자 수:", userManager.getUserCount());
+
+
+</script>
+</body>
+</html>

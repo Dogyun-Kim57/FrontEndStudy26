@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <title>스코프 비유 예제</title>
+  <style>
+    body { font-family: Arial, sans-serif; padding: 20px; }
+    button { padding: 10px; width: 100%; margin-top: 10px; }
+    .box { border: 1px solid #ddd; padding: 12px; margin-top: 12px; }
+  </style>
+</head>
+<body>
+
+<h1>스코프 이해하기 🧠</h1>
+
+<div class="box">
+  전역 변수 = <b>동물</b><br>
+  지역 변수 = <b>돼지</b>
+</div>
+
+<button onclick="showAnimal()">버튼 클릭</button>
+
+<div class="box" id="result"></div>
+
+<script>
+  // 🌍 전역 변수 (모든 곳에서 사용 가능)
+  let animal = "동물";
+
+  function showAnimal() {
+    // 🏠 지역 변수 (이 함수 안에서만 존재)
+    let animal = "돼지";
+
+    document.getElementById("result").textContent =
+      "함수 안에서 animal → " + animal;
+  }
+
+  // 함수 밖에서는 전역 변수만 보임
+  console.log("함수 밖에서 animal →", animal); // 동물
+</script>
+
+</body>
+</html>

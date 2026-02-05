@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>상품 목록</title>
+  <style>
+      .product {
+          border: 1px solid #ddd;
+          padding: 10px;
+          margin: 5px;
+          border-radius: 5px;
+      }
+  </style>
+</head>
+<body>
+    <h1>상품 목록</h1>
+    <div id="productList"></div>
+
+    <script>
+        let productList = '';
+
+        // 10개의 상품을 생성
+        for (let i = 1; i <= 10; i++) {
+            productList += `
+                <div class="product">
+                    <h3>상품 ${i}</h3>
+                    <p>가격: ${i * 10000}원</p>
+                    <button onclick="alert('상품 ${i} 구매!')">구매하기</button>
+                </div>
+            `;
+        }
+
+        document.getElementById('productList').innerHTML = productList;
+    </script>
+</body>
+</html>

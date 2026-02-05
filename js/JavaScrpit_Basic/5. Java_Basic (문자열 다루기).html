@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>개인화 메시지 생성기</title>
+  <style>
+      .container {
+          max-width: 500px;
+          margin: 50px auto;
+          padding: 20px;
+      }
+
+      input, button {
+          padding: 10px;
+          margin: 5px;
+          width: 200px;
+      }
+
+      .result {
+          background: #f0f8ff;
+          padding: 15px;
+          border-radius: 5px;
+          margin-top: 20px;
+      }
+  </style>
+</head>
+<body>
+<div class="container">
+  <h2> 개인화 메시지 생성기</h2>
+
+  <input type="text" id="userName" placeholder="이름을 입력하세요">
+  <input type="text" id="productName" placeholder="상품명을 입력하세요">
+  <input type="number" id="quantity" placeholder="수량">
+  <button onclick="generateMessage()">메시지 생성</button>
+
+  <div id="messageResult" class="result"></div>
+</div>
+
+<script>
+    function generateMessage() {
+        // 입력값 가져오기
+        let user = document.getElementById('userName').value;
+        let product = document.getElementById('productName').value;
+        let qty = document.getElementById('quantity').value;
+
+        // 입력값 검증
+        if (!user || !product || !qty) {
+            alert('모든 정보를 입력해주세요!');
+            return;
+        }
+
+        // 현재 시간 정보
+        let now = new Date();
+        let time = `${now.getHours()}:${now.getMinutes()}`;
+
+        // 템플릿 리터럴로 복합 메시지 생성
+        let message = `
+ <h3> 주문 확인</h3>
+ <p><strong>${user}</strong>님이 선택하신 상품:</p>
+ <ul>
+ <li>상품명: ${product}</li>
+ <li>수량: ${qty}개</li>
+ <li>주문 시간: ${time}</li>
+ </ul>
+ <p>총 <strong style="color: #ff6b6b;">${qty}개</strong>의 ${product}이(가) 장바구니에 담겼습니다!</p>
+ `;
+
+        // 결과 표시
+        document.getElementById('messageResult').innerHTML = message;
+    }
+
+    // 엔터키로도 실행 가능하게
+    document.addEventListener('keypress', function (event) {
+        if (event.key === 'Enter') {
+            generateMessage();
+        }
+    });
+</script>
+</body>
+</html>

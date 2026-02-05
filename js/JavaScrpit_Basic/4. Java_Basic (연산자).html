@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <title>초간단 쇼핑몰 할인 로직</title>
+  <style>
+      body {
+          font-family: Arial, sans-serif;
+          padding: 20px;
+      }
+
+      .box {
+          border: 1px solid #ddd;
+          border-radius: 10px;
+          padding: 14px;
+          max-width: 420px;
+      }
+
+      label {
+          display: block;
+          margin: 10px 0 6px;
+      }
+
+      input, select, button {
+          width: 100%;
+          padding: 10px;
+      }
+
+      #result {
+          margin-top: 12px;
+          line-height: 1.7;
+      }
+  </style>
+</head>
+<body>
+<h1>쇼핑몰 계산기 (아주 쉬운 버전)</h1>
+
+<div class="box">
+  <label>주문금액(원)</label>
+  <input id="totalPrice" type="number" value="50000" min="0"/>
+
+  <label>회원인가요?</label>
+  <select id="isMember">
+    <option value="true" selected>예</option>
+    <option value="false">아니오</option>
+  </select>
+
+  <button id="calcBtn">계산하기</button>
+
+  <div id="result"></div>
+</div>
+
+<script>
+    document.getElementById("calcBtn").addEventListener("click", () => {
+        // 입력값
+        let totalPrice = Number(document.getElementById("totalPrice").value);
+        let isMember = document.getElementById("isMember").value === "true";
+
+        // 룰(실무에서 자주 나오는 수준으로만)
+        let freeShipping = totalPrice >= 30000;              // 3만원 이상 무료배송
+        let memberDiscount = isMember && totalPrice >= 20000; // 회원 + 2만원 이상이면 할인 적용(여기선 '적용 여부'만)
+
+        // 화면 출력
+        document.getElementById("result").innerHTML = `
+        무료배송 가능: <b>${freeShipping}</b><br>
+        회원할인 적용: <b>${memberDiscount}</b>
+      `;
+    });
+</script>
+</body>
+</html>
