@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="d-flex justify-content-between align-items-center">
+  <h2 class="mb-0">게시판</h2>
+  <a class="btn btn-outline-primary" href="/board/write">글쓰기</a>
+</div>
+
+<table class="table table-striped mt-3">
+  <thead>
+  <tr>
+    <th>#</th>
+    <th>제목</th>
+    <th>작성자</th>
+    <th>작성일</th>
+  </tr>
+  </thead>
+  <tbody>
+  {% for p in posts %}
+  <tr>
+    <td>{{ p["id"] }}</td>
+    <td>{{ p["title"] }}</td>
+    <td>{{ p["uid"] }}</td>
+    <td>{{ p["created_at"] }}</td>
+  </tr>
+  {% endfor %}
+  </tbody>
+</table>
+{% endblock %}

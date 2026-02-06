@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>그리드 시스템 실습</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+      .col-demo {
+          background-color: #e9ecef;
+          border: 1px solid #dee2e6;
+          padding: 10px;
+          margin-bottom: 10px;
+      }
+  </style>
+</head>
+<body>
+<div class="container">
+  <h2>기본 그리드 구조</h2>
+  <div class="row">
+    <div class="col-4 col-demo">4컬럼</div>
+    <div class="col-3 col-demo">4컬럼</div>
+    <div class="col-4 col-demo">4컬럼</div>
+  </div>
+
+  <div class="row">
+    <div class="col-6 col-demo">6컬럼</div>
+    <div class="col-6 col-demo">6컬럼</div>
+  </div>
+
+  <div class="row">
+    <div class="col-12 col-demo">12컬럼 (전체)</div>
+  </div>
+</div>
+
+<div class="container">
+  <h2>반응형 그리드</h2>
+  <div class="row">
+    <div class="col-12 col-md-6 col-lg-4 col-demo">
+      <h5>반응형 박스 1</h5>
+      <p>모바일: 전체, 태블릿: 반반, 데스크톱: 1/3</p>
+    </div>
+    <div class="col-12 col-md-6 col-lg-4 col-demo">
+      <h5>반응형 박스 2</h5>
+      <p>화면 크기를 조절해보세요!</p>
+    </div>
+    <div class="col-12 col-md-12 col-lg-4 col-demo">
+      <h5>반응형 박스 3</h5>
+      <p>태블릿에서는 아래로 내려갑니다</p>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>

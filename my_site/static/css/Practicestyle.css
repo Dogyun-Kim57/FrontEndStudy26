@@ -1,0 +1,15 @@
+/* 전체 배경 */
+body {
+  background-color: #f8f9fa;
+}
+
+/* 제목 스타일 */
+h1, h2 {
+  font-weight: 700;
+}
+
+/* 게시판 테이블 여백 */
+table {
+  margin-top: 20px;
+}
+

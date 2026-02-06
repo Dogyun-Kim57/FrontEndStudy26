@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>부트스트랩 컴포넌트 체험</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+<div class="container mt-5">
+  <!-- container는 페이지를 감싸는 전체 박스로 가운데 정렬이 기본    -->
+  <!-- mt-5는 마진 탑 5를 css 클래스로 만들어 놓음 -->
+
+  <h1 class="text-center mb-4">부트스트랩 컴포넌트 체험</h1>
+  <!--  mb-4는 마진 바텀 4 클래스 (아래쪽 여백) -->
+
+  <!-- 버튼 그룹 -->
+  <div class="mb-4">
+    <button type="button" class="btn btn-primary">Primary</button>
+    <button type="button" class="btn btn-success">Success</button>
+    <button type="button" class="btn btn-warning">Warning</button>
+  </div>
+
+  <!-- 알림 메시지 -->
+  <div class="alert alert-info" role="alert">
+    <strong>정보:</strong> 부트스트랩을 사용하면 이렇게 쉽게 알림 메시지를 만들 수 있습니다!
+  </div>
+
+  <!-- 카드 -->
+  <div class="card" style="width: 18rem;">
+    <div class="card-body">
+      <h5 class="card-title">카드 제목</h5>
+      <p class="card-text">부트스트랩 카드 컴포넌트입니다. 정보를 깔끔하게 정리할 수 있어요.</p>
+      <a href="#" class="btn btn-primary">더 보기</a>
+    </div>
+  </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

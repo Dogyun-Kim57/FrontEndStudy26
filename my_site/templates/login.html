@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+{% block content %}
+<h2>로그인</h2>
+<form method="post" class="mt-3" style="max-width: 420px;">
+  <div class="mb-3">
+    <label class="form-label">아이디</label>
+    <input name="uid" class="form-control">
+  </div>
+  <div class="mb-3">
+    <label class="form-label">비밀번호</label>
+    <input name="pw" type="password" class="form-control">
+  </div>
+  <button class="btn btn-primary">로그인</button>
+</form>
+{% endblock %}
